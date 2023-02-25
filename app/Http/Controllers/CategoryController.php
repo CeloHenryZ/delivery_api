@@ -104,8 +104,13 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function inactivate($id_category)
     {
-        //
+        $category = Category::find($id_category);
+
+        $category->isActive = 0;
+        $category->save();
+
+        return response()->json($category, 200);
     }
 }
