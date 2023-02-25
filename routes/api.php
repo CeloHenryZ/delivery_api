@@ -35,7 +35,7 @@ Route::group([
     Route::get('listCategories',                [CategoryController::class, 'index']);
     Route::get('showCategory/{id_category}',    [CategoryController::class, 'show']);
     Route::post('updateCategory/{id_category}', [CategoryController::class, 'update']);
-    Route::delete('inactivateCategory',         [CategoryController::class, 'inactivate']);
+    Route::post('inactivateCategory',           [CategoryController::class, 'inactivate']);
 
 
 });
