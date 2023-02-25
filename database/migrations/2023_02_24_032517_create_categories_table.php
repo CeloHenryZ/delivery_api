@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('category_name', 200);
             $table->string('category_image', 1000);
+            $table->boolean('isActive', 1);
             $table->timestamps();
         });
     }

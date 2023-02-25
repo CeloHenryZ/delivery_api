@@ -25,12 +25,15 @@ Route::group([
 
     //auth
     Route::post('register', [AuthController::class, 'register']);
-    Route::post('login', [AuthController::class, 'login']);
-    Route::post('logout', [AuthController::class, 'logout']);
-    Route::post('refresh', [AuthController::class, 'refresh']);
-    Route::post('me', [AuthController::class, 'me']);
+    Route::post('login',    [AuthController::class, 'login']);
+    Route::post('logout',   [AuthController::class, 'logout']);
+    Route::post('refresh',  [AuthController::class, 'refresh']);
+    Route::post('me',       [AuthController::class, 'me']);
 
     //categories
-    Route::post('registerCategory', [CategoryController::class, 'store']);
+    Route::post('registerCategory',            [CategoryController::class, 'store']);
+    Route::get( 'listCategories',              [CategoryController::class, 'index']);
+    Route::get( 'showCategory/{id_category}',  [CategoryController::class, 'show']);
+    Route::post('updateCategory/{id_category}', [CategoryController::class, 'update']);
 
 });

@@ -15,6 +15,7 @@ class Category extends Model
 
     public $fillable = [
         "category_name",
-        "category_image"
+        "category_image",
+        "isActive"
     ];
 }
