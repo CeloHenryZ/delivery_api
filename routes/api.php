@@ -31,11 +31,12 @@ Route::group([
     Route::post('me',       [AuthController::class, 'me']);
 
     //categories
-    Route::post('registerCategory',             [CategoryController::class, 'store']);
-    Route::get('listCategories',                [CategoryController::class, 'index']);
-    Route::get('showCategory/{id_category}',    [CategoryController::class, 'show']);
+    Route::post('registerCategory',            [CategoryController::class, 'store']);
+    Route::get( 'listCategories',              [CategoryController::class, 'index']);
+    Route::get( 'showCategory/{id_category}',  [CategoryController::class, 'show']);
     Route::post('updateCategory/{id_category}', [CategoryController::class, 'update']);
     Route::delete('inactivateCategory',         [CategoryController::class, 'inactivate']);
-
-
 });
+
+
+
